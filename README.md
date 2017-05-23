@@ -1,8 +1,16 @@
 # open++ README
 
 ---
+***Date: 23.05.2017***
+## v03
 
-Date 30.04.'17 v01
+needed a fresh restart due to some corrupted thrash I did with the old repository.
+
+---
+
+***Date 30.04.'17***
+
+## v02
 
 where do I put new messages? Or where do I store outdated ones?
 
@@ -13,8 +21,9 @@ And log recognized person appearance.
 
 ---
 
-Date: 20.02.'17
-v01
+***Date: 20.02.'17***
+
+## v01
 
 This becomes my git project to lean computer vision with OpenCV 3.2.0 in C++ (due to it's performance) and practice github.
 And a bit markdown for Documentation.
