@@ -1,12 +1,12 @@
 /*
   08.02.'17
-  Jensen
+  jarvis
   opencv with c, USB Cam (most internals are connected via USB)
   designed for linux arch
   mind including --libs opencv to compile command
 */
 
-#include "cv.h"
+#include "opencv2/cv.h"
 #include "highgui.h"
 #include <stdio.h>
 
