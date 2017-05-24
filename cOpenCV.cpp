@@ -6,19 +6,19 @@
   mind including --libs opencv to compile command
 */
 
-#include "cv.h"
-#include "highgui.h"
+#include "/home/pi/opencv-3.0.0/include/opencv/cv.h"
+#include "/home/pi/opencv-3.0.0/include/opencv/highgui.h"
 #include <stdio.h>
 
 #define XRES 1280
 #define YRES 720
 
-int main (int argc, char** argc) {
+int main (/*int argc, char** argc*/) {
   //open camera
   CvCapture* capture = 0;
   capture = cvCaptureFromCAM(-1);
   if(!capture) {
-      frintf(stderr,"could not open Camera Device");
+      fprintf(stderr,"could not open Camera Device");
       return -1;
   }
 
