@@ -6,7 +6,7 @@
   mind including --libs opencv to compile command
 */
 
-#include "~/opencv-3.0.0/include/opencv2/cv.h"
+#include "cv.h"
 #include "highgui.h"
 #include <stdio.h>
 
