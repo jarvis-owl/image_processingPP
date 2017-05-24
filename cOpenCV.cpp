@@ -4,6 +4,9 @@
   opencv with c, USB Cam (most internals are connected via USB)
   designed for linux arch
   mind including --libs opencv to compile command
+
+  might(!) belong to:
+  https://www.uco.es/investiga/grupos/ava/node/40
 */
 
 #include "/home/pi/opencv-3.0.0/include/opencv/cv.h"
