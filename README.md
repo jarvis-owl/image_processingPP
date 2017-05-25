@@ -1,5 +1,15 @@
 # open++ README
 ---
+***Date: 25.05.'17***
+## v05
+
+```` md5
+got someOpenCV code compiling. Though cannot find the right video stream.
+installing a newer version of raspicam
+
+````
+
+---
 ***Date: 24.05.'17***
 ## v04
 
