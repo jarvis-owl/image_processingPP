@@ -9,9 +9,12 @@
   https://www.uco.es/investiga/grupos/ava/node/40
 */
 
+//#define WINDOWNAME c
+
 #include "/home/pi/opencv-3.0.0/include/opencv/cv.h"
 #include "/home/pi/opencv-3.0.0/include/opencv/highgui.h"
 #include <stdio.h>
+//just edit something
 
 #define XRES 1280
 #define YRES 720
@@ -31,7 +34,7 @@ cvSetCaptureProperty( capture, CV_CAP_PROP_FRAME_HEIGHT,YRES);
 
 //grap and show frames
 IplImage* frame = cvQueryFrame(capture);
-cvNamedWindow(WINDOWNAME,CV_WINDOW_AUTOSIZE);
+cvNamedWindow(HansSantiago,CV_WINDOW_AUTOSIZE);
 while(frame != NULL) {
   int key = cvWaitKey(10);
   if (key == 27) break; //stop, when ESC is pressed
@@ -40,7 +43,7 @@ while(frame != NULL) {
 
 //close Camera
 cvReleaseCapture( &capture);
-cvDestroyWindow(WINDOWNAME);
+cvDestroyWindow(HansSantiago);
 
 return 0;
 }

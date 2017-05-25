@@ -1,4 +1,12 @@
-#include "/home/pi/opencv-3.0.0/include/opencv2/opencv.hpp"
+/*
+  compiles and works with:
+  g++ $(pkg-config --libs --cflags opencv) -o SimpleGrab SimpleGrab.cpp
+*/
+
+//#include "/home/pi/opencv-3.0.0/include/opencv2/opencv.hpp"
+//#include "/home/pi/opencv-3.0.0/modules/videoio/include/opencv2/videoio.hpp"
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
 
 using namespace cv;
 
