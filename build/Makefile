@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named simpleCV
+# Target rules for targets named MASK
 
 # Build rule for target.
-simpleCV: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simpleCV
-.PHONY : simpleCV
+MASK: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MASK
+.PHONY : MASK
 
 # fast build rule for target.
-simpleCV/fast:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/build
-.PHONY : simpleCV/fast
+MASK/fast:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/build
+.PHONY : MASK/fast
 
-simpleCV.o: simpleCV.cpp.o
+MASK.o: MASK.cpp.o
 
-.PHONY : simpleCV.o
+.PHONY : MASK.o
 
 # target to build an object file
-simpleCV.cpp.o:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.o
-.PHONY : simpleCV.cpp.o
+MASK.cpp.o:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.o
+.PHONY : MASK.cpp.o
 
-simpleCV.i: simpleCV.cpp.i
+MASK.i: MASK.cpp.i
 
-.PHONY : simpleCV.i
+.PHONY : MASK.i
 
 # target to preprocess a source file
-simpleCV.cpp.i:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.i
-.PHONY : simpleCV.cpp.i
+MASK.cpp.i:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.i
+.PHONY : MASK.cpp.i
 
-simpleCV.s: simpleCV.cpp.s
+MASK.s: MASK.cpp.s
 
-.PHONY : simpleCV.s
+.PHONY : MASK.s
 
 # target to generate assembly for a file
-simpleCV.cpp.s:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.s
-.PHONY : simpleCV.cpp.s
+MASK.cpp.s:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.s
+.PHONY : MASK.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... simpleCV"
-	@echo "... simpleCV.o"
-	@echo "... simpleCV.i"
-	@echo "... simpleCV.s"
+	@echo "... MASK"
+	@echo "... MASK.o"
+	@echo "... MASK.i"
+	@echo "... MASK.s"
 .PHONY : help
 
 

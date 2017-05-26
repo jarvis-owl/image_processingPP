@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/pi/github/image_processingPP
 CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/simpleCV.dir
+# Target rules for target CMakeFiles/MASK.dir
 
 # All Build rule for target.
-CMakeFiles/simpleCV.dir/all:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/depend
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/github/image_processingPP/build/CMakeFiles --progress-num=1,2 "Built target simpleCV"
-.PHONY : CMakeFiles/simpleCV.dir/all
+CMakeFiles/MASK.dir/all:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/depend
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/github/image_processingPP/build/CMakeFiles --progress-num=1,2 "Built target MASK"
+.PHONY : CMakeFiles/MASK.dir/all
 
 # Include target in all.
-all: CMakeFiles/simpleCV.dir/all
+all: CMakeFiles/MASK.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/simpleCV.dir/rule: cmake_check_build_system
+CMakeFiles/MASK.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simpleCV.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MASK.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/build/CMakeFiles 0
-.PHONY : CMakeFiles/simpleCV.dir/rule
+.PHONY : CMakeFiles/MASK.dir/rule
 
 # Convenience name for target.
-simpleCV: CMakeFiles/simpleCV.dir/rule
+MASK: CMakeFiles/MASK.dir/rule
 
-.PHONY : simpleCV
-
-# clean rule for target.
-CMakeFiles/simpleCV.dir/clean:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/clean
-.PHONY : CMakeFiles/simpleCV.dir/clean
+.PHONY : MASK
 
 # clean rule for target.
-clean: CMakeFiles/simpleCV.dir/clean
+CMakeFiles/MASK.dir/clean:
+	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/clean
+.PHONY : CMakeFiles/MASK.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/MASK.dir/clean
 
 .PHONY : clean
 
