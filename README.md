@@ -1,5 +1,16 @@
 # open++ README
 ---
+***Date: 25.05.'17***
+## v05
+
+```` md5
+got someOpenCV code compiling. Though cannot find the right video stream.
+installing a newer version of raspicam.
+found a old and compiled (unfortunately i have no clue HOW it was compiled) raspicam_cv_test. so i CAN work somehow!
+
+````
+
+---
 ***Date: 24.05.'17***
 ## v04
 
