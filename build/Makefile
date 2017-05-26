@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named simpleCV
+# Target rules for targets named cOpenCV
 
 # Build rule for target.
-simpleCV: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simpleCV
-.PHONY : simpleCV
+cOpenCV: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cOpenCV
+.PHONY : cOpenCV
 
 # fast build rule for target.
-simpleCV/fast:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/build
-.PHONY : simpleCV/fast
+cOpenCV/fast:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/build
+.PHONY : cOpenCV/fast
 
-simpleCV.o: simpleCV.cpp.o
+cOpenCV.o: cOpenCV.cpp.o
 
-.PHONY : simpleCV.o
+.PHONY : cOpenCV.o
 
 # target to build an object file
-simpleCV.cpp.o:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.o
-.PHONY : simpleCV.cpp.o
+cOpenCV.cpp.o:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.o
+.PHONY : cOpenCV.cpp.o
 
-simpleCV.i: simpleCV.cpp.i
+cOpenCV.i: cOpenCV.cpp.i
 
-.PHONY : simpleCV.i
+.PHONY : cOpenCV.i
 
 # target to preprocess a source file
-simpleCV.cpp.i:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.i
-.PHONY : simpleCV.cpp.i
+cOpenCV.cpp.i:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.i
+.PHONY : cOpenCV.cpp.i
 
-simpleCV.s: simpleCV.cpp.s
+cOpenCV.s: cOpenCV.cpp.s
 
-.PHONY : simpleCV.s
+.PHONY : cOpenCV.s
 
 # target to generate assembly for a file
-simpleCV.cpp.s:
-	$(MAKE) -f CMakeFiles/simpleCV.dir/build.make CMakeFiles/simpleCV.dir/simpleCV.cpp.s
-.PHONY : simpleCV.cpp.s
+cOpenCV.cpp.s:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.s
+.PHONY : cOpenCV.cpp.s
 
 # Help Target
 help:
@@ -156,12 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... simpleCV"
-	@echo "... simpleCV.o"
-	@echo "... simpleCV.i"
-	@echo "... simpleCV.s"
+	@echo "... edit_cache"
+	@echo "... cOpenCV"
+	@echo "... cOpenCV.o"
+	@echo "... cOpenCV.i"
+	@echo "... cOpenCV.s"
 .PHONY : help
 
 
