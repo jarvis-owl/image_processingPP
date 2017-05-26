@@ -1,0 +1,3 @@
+/home/pi/github/image_processingPP/build/CMakeFiles/edit_cache.dir
+/home/pi/github/image_processingPP/build/CMakeFiles/rebuild_cache.dir
+/home/pi/github/image_processingPP/build/CMakeFiles/simpleCV.dir
