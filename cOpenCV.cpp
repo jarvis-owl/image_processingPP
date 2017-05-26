@@ -1,4 +1,7 @@
 /*
+
+  this is TRUE OpenCV Code in contrary to my further used code with raspicam library
+
   08.02.'17
   jarvis
   opencv with c, USB Cam (most internals are connected via USB)
@@ -11,10 +14,11 @@
 
 //#define WINDOWNAME c
 
-#include "/home/pi/opencv-3.0.0/include/opencv/cv.h"
-#include "/home/pi/opencv-3.0.0/include/opencv/highgui.h"
+// /home/pi/opencv-3.0.0/include/opencv/
+#include "cv.h"
+#include "highgui.h"
 #include <stdio.h>
-//just edit something
+
 
 #define XRES 1280
 #define YRES 720

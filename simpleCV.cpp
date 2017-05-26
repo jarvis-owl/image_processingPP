@@ -7,6 +7,7 @@
   https://www.uco.es/investiga/grupos/ava/node/40
   https://sourceforge.net/projects/raspicam/files/?
 
+  compiling see below
 */
 
 #include <ctime>
