@@ -5,7 +5,10 @@
 
     compile command:
      g++ simpletest_raspicam.cpp -o simpletest_raspicam -I/usr/local/include -lraspicam -lmmal -lmmal_core -lmmal_util
+    what the heck of a command. now i have to fiddle with MAKE (26.05.'17 successfully)
 
+    26.05.'17
+    ended processing this code futher. obsolet/redundant
   */
 #include <ctime>
 #include <time.h>
@@ -38,7 +41,7 @@ int main ( int argc,char **argv ) {
     outFile<<"P6\n"<<Camera.getWidth() <<" "<<Camera.getHeight() <<" 255\n";
     outFile.write ( ( char* ) data, Camera.getImageTypeSize ( raspicam::RASPICAM_FORMAT_RGB ) );
     cout<<"Image saved at raspicam_image.ppm"<<endl;
-    //free resources 
+    //free resources
     delete data;
     return 0;
 }

@@ -4,6 +4,8 @@
   http://pklab.net/?id=392&lang=EN
   compile with:
   g++ $(pkg-config --libs --cflags opencv) -o SimpleGrab SimpleGrab.cpp
+
+  > unable to open the camera - probably because no 'raspicam_cv' library is used -- seed simpleCV.cpp
 */
 
 #include <stdio.h>

@@ -1,6 +1,8 @@
 /*
   compiles and works with:
   g++ $(pkg-config --libs --cflags opencv) -o SimpleGrab SimpleGrab.cpp
+
+  no output generated yet
 */
 
 //#include "/home/pi/opencv-3.0.0/include/opencv2/opencv.hpp"

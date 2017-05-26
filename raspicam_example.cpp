@@ -12,6 +12,9 @@
   make
 
 guess i'm going to reinstall raspicam, newer version
+26.05.'17 done
+compiling with make successfull
+this example is slightly simpler than simpleCV, though I create my MASK.cpp from that.
 */
 
 
