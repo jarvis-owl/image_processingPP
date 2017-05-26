@@ -7,6 +7,9 @@
   https://www.uco.es/investiga/grupos/ava/node/40
   https://sourceforge.net/projects/raspicam/files/?
 
+  tried compiling with:
+   g++ $(pkg-config --libs --cflags opencv) -o raspicam_example raspicam_example.cpp
+  -> missing dependencies (opencv)
 
   fiddeling with compilers
   make
@@ -19,19 +22,20 @@ this example is slightly simpler than simpleCV, though I create my MASK.cpp from
 
 
 #include <ctime>
+//#include <time>
 #include <fstream>
 #include <iostream>
 #include <raspicam/raspicam.h>
 using namespace std;
 
-int main ( int argc,char **argv ) {
+int main ( /* int argc,char **argv */) {
     raspicam::RaspiCam Camera; //Cmaera object
     //Open camera
     cout<<"Opening Camera..."<<endl;
     if ( !Camera.open()) {cerr<<"Error opening camera"<<endl;return -1;}
     //wait a while until camera stabilizes
     cout<<"Sleeping for 3 secs"<<endl;
-    sleep(3);
+    //sleep(3);
     //capture
     Camera.grab();
     //allocate memory
@@ -46,3 +50,4 @@ int main ( int argc,char **argv ) {
     //free resrources
     delete data;
     return 0;
+  }

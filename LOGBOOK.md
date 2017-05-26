@@ -1,4 +1,4 @@
-# open++ README
+# open++ LOGBOOK
 ---
 ***Date: 26.05.'17***
 ```` md6
