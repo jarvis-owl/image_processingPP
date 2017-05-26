@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MASK
+# Target rules for targets named cOpenCV
 
 # Build rule for target.
-MASK: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MASK
-.PHONY : MASK
+cOpenCV: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cOpenCV
+.PHONY : cOpenCV
 
 # fast build rule for target.
-MASK/fast:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/build
-.PHONY : MASK/fast
+cOpenCV/fast:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/build
+.PHONY : cOpenCV/fast
 
-MASK.o: MASK.cpp.o
+cOpenCV.o: cOpenCV.cpp.o
 
-.PHONY : MASK.o
+.PHONY : cOpenCV.o
 
 # target to build an object file
-MASK.cpp.o:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.o
-.PHONY : MASK.cpp.o
+cOpenCV.cpp.o:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.o
+.PHONY : cOpenCV.cpp.o
 
-MASK.i: MASK.cpp.i
+cOpenCV.i: cOpenCV.cpp.i
 
-.PHONY : MASK.i
+.PHONY : cOpenCV.i
 
 # target to preprocess a source file
-MASK.cpp.i:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.i
-.PHONY : MASK.cpp.i
+cOpenCV.cpp.i:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.i
+.PHONY : cOpenCV.cpp.i
 
-MASK.s: MASK.cpp.s
+cOpenCV.s: cOpenCV.cpp.s
 
-.PHONY : MASK.s
+.PHONY : cOpenCV.s
 
 # target to generate assembly for a file
-MASK.cpp.s:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/MASK.cpp.s
-.PHONY : MASK.cpp.s
+cOpenCV.cpp.s:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/cOpenCV.cpp.s
+.PHONY : cOpenCV.cpp.s
 
 # Help Target
 help:
@@ -156,12 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MASK"
-	@echo "... MASK.o"
-	@echo "... MASK.i"
-	@echo "... MASK.s"
+	@echo "... edit_cache"
+	@echo "... cOpenCV"
+	@echo "... cOpenCV.o"
+	@echo "... cOpenCV.i"
+	@echo "... cOpenCV.s"
 .PHONY : help
 
 

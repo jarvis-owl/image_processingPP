@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/pi/github/image_processingPP
 CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/MASK.dir
+# Target rules for target CMakeFiles/cOpenCV.dir
 
 # All Build rule for target.
-CMakeFiles/MASK.dir/all:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/depend
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/github/image_processingPP/build/CMakeFiles --progress-num=1,2 "Built target MASK"
-.PHONY : CMakeFiles/MASK.dir/all
+CMakeFiles/cOpenCV.dir/all:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/depend
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/github/image_processingPP/build/CMakeFiles --progress-num=1,2 "Built target cOpenCV"
+.PHONY : CMakeFiles/cOpenCV.dir/all
 
 # Include target in all.
-all: CMakeFiles/MASK.dir/all
+all: CMakeFiles/cOpenCV.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MASK.dir/rule: cmake_check_build_system
+CMakeFiles/cOpenCV.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MASK.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cOpenCV.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/build/CMakeFiles 0
-.PHONY : CMakeFiles/MASK.dir/rule
+.PHONY : CMakeFiles/cOpenCV.dir/rule
 
 # Convenience name for target.
-MASK: CMakeFiles/MASK.dir/rule
+cOpenCV: CMakeFiles/cOpenCV.dir/rule
 
-.PHONY : MASK
-
-# clean rule for target.
-CMakeFiles/MASK.dir/clean:
-	$(MAKE) -f CMakeFiles/MASK.dir/build.make CMakeFiles/MASK.dir/clean
-.PHONY : CMakeFiles/MASK.dir/clean
+.PHONY : cOpenCV
 
 # clean rule for target.
-clean: CMakeFiles/MASK.dir/clean
+CMakeFiles/cOpenCV.dir/clean:
+	$(MAKE) -f CMakeFiles/cOpenCV.dir/build.make CMakeFiles/cOpenCV.dir/clean
+.PHONY : CMakeFiles/cOpenCV.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/cOpenCV.dir/clean
 
 .PHONY : clean
 

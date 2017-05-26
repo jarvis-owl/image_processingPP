@@ -1,6 +1,7 @@
 /*
 
   this is TRUE OpenCV Code in contrary to my further used code with raspicam library
+  compiles with make, but cant access Camera
 
   08.02.'17
   jarvis
@@ -8,20 +9,22 @@
   designed for linux arch
   mind including --libs opencv to compile command
 
-  might(!) belong to:
+  might(!) belong to: (Mai, it doesn't - otherwise raspicam lib would be present)
   https://www.uco.es/investiga/grupos/ava/node/40
 */
 
 //#define WINDOWNAME c
 
 // /home/pi/opencv-3.0.0/include/opencv/
-#include "cv.h"
-#include "highgui.h"
+#include "/home/pi/opencv-3.0.0/include/opencv/cv.h"
+#include "/home/pi/opencv-3.0.0/include/opencv/highgui.h"
 #include <stdio.h>
 
 
 #define XRES 1280
 #define YRES 720
+
+char WINDOWNAME[] = "HansSantiago";
 
 int main (/*int argc, char** argc*/) {
   //open camera
@@ -38,7 +41,7 @@ cvSetCaptureProperty( capture, CV_CAP_PROP_FRAME_HEIGHT,YRES);
 
 //grap and show frames
 IplImage* frame = cvQueryFrame(capture);
-cvNamedWindow(HansSantiago,CV_WINDOW_AUTOSIZE);
+cvNamedWindow(WINDOWNAME,CV_WINDOW_AUTOSIZE);
 while(frame != NULL) {
   int key = cvWaitKey(10);
   if (key == 27) break; //stop, when ESC is pressed
@@ -47,7 +50,7 @@ while(frame != NULL) {
 
 //close Camera
 cvReleaseCapture( &capture);
-cvDestroyWindow(HansSantiago);
+cvDestroyWindow(WINDOWNAME);
 
 return 0;
 }
