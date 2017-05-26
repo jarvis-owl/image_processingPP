@@ -1,7 +1,7 @@
 
 /*
   26.05.'17
-  this should server as start/mask file for future code.
+  this should serve as start/mask file for future code.
   derived from old/simpleCV.cpp [standard example from resource]
 */
 

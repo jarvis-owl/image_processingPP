@@ -1,8 +1,15 @@
 
 /*
   26.05.'17
-  this should server as start/mask file for future code.
-  derived from old/simpleCV.cpp [standard example from resource]
+  this may become my very first project
+
+  Aim:
+      learn and use raspicam as well as OpenCV 3.0.0
+
+      capture several frames ~ several seconds - concatenate those images to one mp4 file
+      process capured images (only for getting used to it)
+        - grayscale
+        - determine brightness
 */
 
 
