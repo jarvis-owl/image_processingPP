@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/share/myOpenCV/histogramm.cpp
+opencv2/highgui/highgui.hpp
+/home/pi/share/myOpenCV/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/pi/share/myOpenCV/opencv2/imgproc/imgproc.hpp
+iostream
+-
+stdio.h
+-
+
