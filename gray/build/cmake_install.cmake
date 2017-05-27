@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/share/myOpenCV
+# Install script for directory: /home/pi/github/image_processingPP/gray
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/share/myOpenCV/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/github/image_processingPP/gray/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

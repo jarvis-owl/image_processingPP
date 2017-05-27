@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/share/myOpenCV
+CMAKE_SOURCE_DIR = /home/pi/github/image_processingPP/gray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/share/myOpenCV/build
+CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/gray/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/histogramm.dir
+# Target rules for target CMakeFiles/gray.dir
 
 # All Build rule for target.
-CMakeFiles/histogramm.dir/all:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/depend
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/share/myOpenCV/build/CMakeFiles --progress-num=1,2 "Built target histogramm"
-.PHONY : CMakeFiles/histogramm.dir/all
+CMakeFiles/gray.dir/all:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/depend
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/github/image_processingPP/gray/build/CMakeFiles --progress-num=1,2 "Built target gray"
+.PHONY : CMakeFiles/gray.dir/all
 
 # Include target in all.
-all: CMakeFiles/histogramm.dir/all
+all: CMakeFiles/gray.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/histogramm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/share/myOpenCV/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/histogramm.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/share/myOpenCV/build/CMakeFiles 0
-.PHONY : CMakeFiles/histogramm.dir/rule
+CMakeFiles/gray.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/gray/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gray.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/gray/build/CMakeFiles 0
+.PHONY : CMakeFiles/gray.dir/rule
 
 # Convenience name for target.
-histogramm: CMakeFiles/histogramm.dir/rule
+gray: CMakeFiles/gray.dir/rule
 
-.PHONY : histogramm
-
-# clean rule for target.
-CMakeFiles/histogramm.dir/clean:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/clean
-.PHONY : CMakeFiles/histogramm.dir/clean
+.PHONY : gray
 
 # clean rule for target.
-clean: CMakeFiles/histogramm.dir/clean
+CMakeFiles/gray.dir/clean:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/clean
+.PHONY : CMakeFiles/gray.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/gray.dir/clean
 
 .PHONY : clean
 
