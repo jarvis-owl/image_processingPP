@@ -12,18 +12,21 @@
         - determine brightness
 */
 
+#define N_COUNT 100
 
 #include <iostream>
-#include <raspicam/raspicam_cv.h>
+#include <raspicam/raspicam_cv.h> // on RPi @ /usr/local/include/
+// raspicam_cv.h includes opecv2/core/core.hpp as well as opencv/highgui/highgui.hpp by itself
 using namespace std;
 
 int main ( int argc,char **argv ) {
 
-    char pathname[] = "/home/pi/shared/fromMASK.jpg"
+    char pathname[] = "/home/pi/shared/from_project_1.jpg"
 
     raspicam::RaspiCam_Cv Camera;
-    cv::Mat image;
-    int nCount=100;
+    cv::Mat src;
+    cv::Mat dst;
+
 
     //set camera params
     Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1 );
@@ -33,21 +36,25 @@ int main ( int argc,char **argv ) {
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;return -1;}
 
     //Start capture
-    cout<<"Capturing "<<nCount<<" frames ...."<<endl;
+    cout<<"Capturing "<<N_COUNT<<" frames ...."<<endl;
 
-    for ( int i=0; i<nCount; i++ ) {
+    //for ( int i=0; i<N_COUNT; i++ ) {
         Camera.grab();
-        Camera.retrieve ( image);
-        if ( i%5==0 )  cout<<"\r captured "<<i<<" images"<<std::flush;
-    }
+        Camera.retrieve ( src);
+
+        dst = src.clone;
+
+      //  if ( i%5==0 )  cout<<"\r captured "<<i<<" images"<<std::flush;
+    //}
     cout << endl;
     cout<<"Stop camera..."<<endl;
     Camera.release();
 
+    //process one image
 
     //save image
-    cv::imwrite("raspicam_cv_image.jpg",image);
-    cout<<"Image saved at raspicam_cv_image.jpg"<<endl;
+    cv::imwrite(pathname,dst);
+    cout<<"Image saved at "<< pathname <<endl;
 
     return 0;
 }
