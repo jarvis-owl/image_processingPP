@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/share/myOpenCV
+CMAKE_SOURCE_DIR = /home/pi/github/image_processingPP/gray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/share/myOpenCV/build
+CMAKE_BINARY_DIR = /home/pi/github/image_processingPP/gray/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/share/myOpenCV/build/CMakeFiles /home/pi/share/myOpenCV/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/gray/build/CMakeFiles /home/pi/github/image_processingPP/gray/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/share/myOpenCV/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/github/image_processingPP/gray/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named histogramm
+# Target rules for targets named gray
 
 # Build rule for target.
-histogramm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 histogramm
-.PHONY : histogramm
+gray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gray
+.PHONY : gray
 
 # fast build rule for target.
-histogramm/fast:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/build
-.PHONY : histogramm/fast
+gray/fast:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/build
+.PHONY : gray/fast
 
-histogramm.o: histogramm.cpp.o
+gray.o: gray.cpp.o
 
-.PHONY : histogramm.o
+.PHONY : gray.o
 
 # target to build an object file
-histogramm.cpp.o:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/histogramm.cpp.o
-.PHONY : histogramm.cpp.o
+gray.cpp.o:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/gray.cpp.o
+.PHONY : gray.cpp.o
 
-histogramm.i: histogramm.cpp.i
+gray.i: gray.cpp.i
 
-.PHONY : histogramm.i
+.PHONY : gray.i
 
 # target to preprocess a source file
-histogramm.cpp.i:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/histogramm.cpp.i
-.PHONY : histogramm.cpp.i
+gray.cpp.i:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/gray.cpp.i
+.PHONY : gray.cpp.i
 
-histogramm.s: histogramm.cpp.s
+gray.s: gray.cpp.s
 
-.PHONY : histogramm.s
+.PHONY : gray.s
 
 # target to generate assembly for a file
-histogramm.cpp.s:
-	$(MAKE) -f CMakeFiles/histogramm.dir/build.make CMakeFiles/histogramm.dir/histogramm.cpp.s
-.PHONY : histogramm.cpp.s
+gray.cpp.s:
+	$(MAKE) -f CMakeFiles/gray.dir/build.make CMakeFiles/gray.dir/gray.cpp.s
+.PHONY : gray.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... histogramm"
-	@echo "... histogramm.o"
-	@echo "... histogramm.i"
-	@echo "... histogramm.s"
+	@echo "... gray"
+	@echo "... gray.o"
+	@echo "... gray.i"
+	@echo "... gray.s"
 .PHONY : help
 
 

@@ -1,3 +1,3 @@
-/home/pi/share/myOpenCV/build/CMakeFiles/edit_cache.dir
-/home/pi/share/myOpenCV/build/CMakeFiles/rebuild_cache.dir
-/home/pi/share/myOpenCV/build/CMakeFiles/histogramm.dir
+/home/pi/github/image_processingPP/gray/build/CMakeFiles/edit_cache.dir
+/home/pi/github/image_processingPP/gray/build/CMakeFiles/rebuild_cache.dir
+/home/pi/github/image_processingPP/gray/build/CMakeFiles/gray.dir

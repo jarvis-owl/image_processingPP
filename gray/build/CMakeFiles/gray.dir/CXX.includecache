@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/share/myOpenCV/histogramm.cpp
+/home/pi/github/image_processingPP/gray/gray.cpp
+opencv/cv.h
+-
 opencv2/highgui/highgui.hpp
-/home/pi/share/myOpenCV/opencv2/highgui/highgui.hpp
+/home/pi/github/image_processingPP/gray/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/pi/share/myOpenCV/opencv2/imgproc/imgproc.hpp
-iostream
 -
 stdio.h
 -

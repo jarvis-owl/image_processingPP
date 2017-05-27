@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/share/myOpenCV/histogramm.cpp" "/home/pi/share/myOpenCV/build/CMakeFiles/histogramm.dir/histogramm.cpp.o"
+  "/home/pi/github/image_processingPP/gray/gray.cpp" "/home/pi/github/image_processingPP/gray/build/CMakeFiles/gray.dir/gray.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
