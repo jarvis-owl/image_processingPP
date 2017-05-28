@@ -29,7 +29,7 @@
 
 
 #include <raspicam/raspicam_cv.h>
-
+#define ROLL 90
 using namespace std;
 
 int main( int argc, char** argv )
@@ -42,8 +42,11 @@ int main( int argc, char** argv )
   cv::Mat hsv;
   //set camera params
   raspicam::RaspiCam_Cv Camera;
-  Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1 );
-  //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,XRES);
+  Camera.set( CV_CAP_PROP_ROLL, ROLL );
+  Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
+
+  //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,1280);
+  //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_HEIGHT,720);
 
   if (!Camera.open()) {std::cerr<<"Error opening the camera"<<std::endl;return -1;}
 
@@ -56,7 +59,7 @@ int main( int argc, char** argv )
   //CONVERT
   //cvtColor( src, hsv, CV_BGR2HSV );
 
-  imwrite( "/home/pi/share/images/test_timelapse_CV_8UC1.jpg", src );
+  imwrite( "/home/pi/share/images/timelapse/test_timelapse.jpg", src );
 
 
   return 0;

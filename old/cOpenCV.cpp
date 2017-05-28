@@ -9,7 +9,7 @@
   designed for linux arch
   mind including --libs opencv to compile command
 
-  might(!) belong to: (Mai, it doesn't - otherwise raspicam lib would be present)
+  might(!) belong to: (May, it doesn't - otherwise raspicam lib would be present)
   https://www.uco.es/investiga/grupos/ava/node/40
 */
 
