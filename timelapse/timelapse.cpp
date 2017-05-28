@@ -42,8 +42,9 @@ int main( int argc, char** argv )
   cv::Mat hsv;
   //set camera params
   raspicam::RaspiCam_Cv Camera;
-  Camera.set( CV_CAP_PROP_ROLL, ROLL );
-  Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1);
+  cout << Camera.set( CV_CAP_PROP_ROLL, ROLL ) << endl;
+  // cvSetCaptureProperty(Camera,CV_CAP_PROP_ROLL, ROLL); // no
+  cout << Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1) << endl;
 
   //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,1280);
   //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_HEIGHT,720);
