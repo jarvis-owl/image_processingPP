@@ -3,6 +3,9 @@
   26.05.'17
   this should serve as start/mask file for future code.
   derived from old/simpleCV.cpp [standard example from resource]
+
+  raspicam examples@ /raspicam-0.1.6/dependencies/current/interface/mmal/test/examples
+  
 */
 
 

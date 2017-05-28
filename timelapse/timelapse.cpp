@@ -24,27 +24,33 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <stdio.h>
 
+#include <raspicam/raspicam_cv.h>
+
 using namespace cv;
 
 int main( int argc, char** argv )
 {
- char* imageName = argv[1];
 
- Mat image;
- image = imread( imageName, 1 );
+  if (argc<2) char* pathname = argv[1];
 
- if( argc != 2 || !image.data )
- {
-   printf( " No image data \n " );
-   return -1;
- }
-
-//CONVERT
- Mat hsv_image;
- cvtColor( image, hsv_image, CV_BGR2HSV );
-
- //imwrite( "Gray_Image.jpg", gray_image );
+  Mat src;
+  Mat dst;
+  Mat hsv;
+  //set camera params
+  raspicam::RaspiCam_Cv Camera;
+  Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1 );
+  if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;return -1;}
+  
+  //could be simplified with Camera.read(src)
+  Camera.grab();
+  Camera.retrieve(src);
 
 
- return 0;
+  //CONVERT
+  cvtColor( src, hsv, CV_BGR2HSV );
+
+  //imwrite( "Gray_Image.jpg", gray_image );
+
+
+  return 0;
 }
