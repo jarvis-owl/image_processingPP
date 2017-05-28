@@ -5,7 +5,7 @@
   derived from old/simpleCV.cpp [standard example from resource]
 
   raspicam examples@ /raspicam-0.1.6/dependencies/current/interface/mmal/test/examples
-  
+
 */
 
 
@@ -15,7 +15,7 @@ using namespace std;
 
 int main ( int argc,char **argv ) {
 
-    char pathname[] = "/home/pi/shared/fromMASK.jpg"
+    char pathname[] = "/home/pi/shared/images/fromMASK.jpg"
 
     raspicam::RaspiCam_Cv Camera;
     cv::Mat image;
@@ -42,7 +42,7 @@ int main ( int argc,char **argv ) {
 
 
     //save image
-    cv::imwrite("raspicam_cv_image.jpg",image);
+    cv::imwrite(pathname,image);
     cout<<"Image saved at raspicam_cv_image.jpg"<<endl;
 
     return 0;

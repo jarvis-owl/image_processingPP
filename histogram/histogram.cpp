@@ -67,14 +67,12 @@ int main( int argc, char** argv )
   /// Display -- commented, due to missing display
   //namedWindow("calcHist Demo", CV_WINDOW_AUTOSIZE );
   //imshow("calcHist Demo", histImage );
-  if(imwrite("histogram.jpg",histImage) )
+  if(imwrite("/home/pi/share/images/actual_histogram.jpg",histImage) )
   {
     printf("imwrite returned true");
   }
 
-
-
-  waitKey(0);
+  //waitKey(0);
 
   return 0;
 }

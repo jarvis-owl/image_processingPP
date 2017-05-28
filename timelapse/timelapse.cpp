@@ -15,41 +15,48 @@
       - code: CV_BGR2HSV
     accesing pixel intensity values [http://docs.opencv.org/2.4.13.2/doc/user_guide/ug_mat.html#accessing-pixel-intensity-values]
     MAT basics - need to access the V value [http://docs.opencv.org/2.4/doc/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html#matthebasicimagecontainer]
+
+    Basic Structures: http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html
 */
 
 
-
+#include <iostream>
+//#include <iomanip>
 #include <opencv/cv.h>
-#include "opencv2/highgui/highgui.hpp" //#include <highgui.h>
+//#include "opencv2/highgui/highgui.hpp" //#include <highgui.h>
 #include <opencv2/imgproc/imgproc.hpp>
-#include <stdio.h>
+//#include <stdio.h>
+
 
 #include <raspicam/raspicam_cv.h>
 
-using namespace cv;
+using namespace std;
 
 int main( int argc, char** argv )
 {
 
-  if (argc<2) char* pathname = argv[1];
+  if (argc>2) char* pathname = argv[1];
 
-  Mat src;
-  Mat dst;
-  Mat hsv;
+  cv::Mat src;
+  cv::Mat dst;
+  cv::Mat hsv;
   //set camera params
   raspicam::RaspiCam_Cv Camera;
   Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1 );
-  if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;return -1;}
-  
+  //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,XRES);
+
+  if (!Camera.open()) {std::cerr<<"Error opening the camera"<<std::endl;return -1;}
+
   //could be simplified with Camera.read(src)
   Camera.grab();
   Camera.retrieve(src);
 
-
+  std::cout << "number of matrix channels: " << src.channels() << std::endl;
+  std::cout << "matrix size: " << src.size() << std::endl;
   //CONVERT
-  cvtColor( src, hsv, CV_BGR2HSV );
+  //cvtColor( src, hsv, CV_BGR2HSV );
 
-  //imwrite( "Gray_Image.jpg", gray_image );
+  imwrite( "/home/pi/share/images/test_timelapse_CV_8UC1.jpg", src );
 
 
   return 0;
