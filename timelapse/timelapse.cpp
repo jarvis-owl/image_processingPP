@@ -13,10 +13,18 @@
     cvtColor(src, dst, code, dst n channel) [http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html]
       - convert to HSV and check V channel
       - code: CV_BGR2HSV
-    accesing pixel intensity values [http://docs.opencv.org/2.4.13.2/doc/user_guide/ug_mat.html#accessing-pixel-intensity-values]
+    accessing pixel intensity values [http://docs.opencv.org/2.4.13.2/doc/user_guide/ug_mat.html#accessing-pixel-intensity-values]
     MAT basics - need to access the V value [http://docs.opencv.org/2.4/doc/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html#matthebasicimagecontainer]
 
     Basic Structures: http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html
+
+    directories:
+    rapsicam_cv.h     /usr/local/include
+    raspcam_cv.cpp    /home/pi/raspicamXXX/src/
+
+    added CV_CAP_PROP_ROLL manually in raspicam_cv.cpp @line 200 as discribed in https://sourceforge.net/p/raspicam/tickets/18/
+    should have been implemented in raspicam 0.1.4
+    I can not find any declaration, tought my compiler throws no error
 */
 
 
@@ -42,9 +50,11 @@ int main( int argc, char** argv )
   cv::Mat hsv;
   //set camera params
   raspicam::RaspiCam_Cv Camera;
-  cout << Camera.set( CV_CAP_PROP_ROLL, ROLL ) << endl;
+  cout << "set return: "<< Camera.set( CV_CAP_PROP_ROLL, ROLL ) << endl;
+  cout << "get roll return: " << Camera.get(CV_CAP_PROP_ROLL) << endl;
   // cvSetCaptureProperty(Camera,CV_CAP_PROP_ROLL, ROLL); // no
-  cout << Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1) << endl;
+  cout << "set format CV_8UC1 [onechannel]" << Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1) << endl;
+  cout << "there was no visual difference in the channel count - try CV_8UC3 again " << endl;
 
   //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,1280);
   //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_HEIGHT,720);
