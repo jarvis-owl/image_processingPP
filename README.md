@@ -23,5 +23,6 @@ This is my repository for my project using OpenCV on the Raspberry Pi 2 B with t
 - [OpenCV 3.0.0](http://opencv.org/opencv-3-0.html)
 - [raspicam 0.1.6](https://www.uco.es/investiga/grupos/ava/node/40)
 - [Sony Alpha 6000 remote API](https://github.com/alech/alphamote)
+- [OpenCV haar classifier training](https://github.com/mrnugget/opencv-haar-classifier-training)
 
 ### see [LOGBOOK](https://github.com/jarvis-owl/image_processingPP/blob/master/LOGBOOK.md)
