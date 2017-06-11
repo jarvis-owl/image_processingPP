@@ -37,7 +37,7 @@
 
 
 #include <raspicam/raspicam_cv.h>
-#define ROLL 90
+#define ROLL 270
 using namespace std;
 
 int main( int argc, char** argv )
@@ -50,10 +50,18 @@ int main( int argc, char** argv )
   cv::Mat hsv;
   //set camera params
   raspicam::RaspiCam_Cv Camera;
+
+  Camera.set ( CV_CAP_PROP_FRAME_WIDTH,  1280  );
+  Camera.set ( CV_CAP_PROP_FRAME_HEIGHT,960  );
+  Camera.set ( CV_CAP_PROP_BRIGHTNESS,50  );
+  Camera.set ( CV_CAP_PROP_CONTRAST ,50  );
+  Camera.set ( CV_CAP_PROP_SATURATION, 50  );
+  Camera.set ( CV_CAP_PROP_GAIN, 50  );
+
   cout << "set return: "<< Camera.set( CV_CAP_PROP_ROLL, ROLL ) << endl;
   cout << "get roll return: " << Camera.get(CV_CAP_PROP_ROLL) << endl;
   // cvSetCaptureProperty(Camera,CV_CAP_PROP_ROLL, ROLL); // no
-  cout << "set format CV_8UC1 [onechannel]" << Camera.set( CV_CAP_PROP_FORMAT, CV_8UC1) << endl;
+  cout << "set format CV_8UC1 [onechannel]" << Camera.set( CV_CAP_PROP_FORMAT, CV_8UC3) << endl;
   cout << "there was no visual difference in the channel count - try CV_8UC3 again " << endl;
 
   //cvSetCaptureProperty( Camera, CV_CAP_PROP_FRAME_WIDTH,1280);
