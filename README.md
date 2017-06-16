@@ -26,3 +26,4 @@ This is my repository for my project using OpenCV on the Raspberry Pi 2 B with t
 - [OpenCV haar classifier training](https://github.com/mrnugget/opencv-haar-classifier-training)
 
 ### see [LOGBOOK](https://github.com/jarvis-owl/image_processingPP/blob/master/LOGBOOK.md)
+last update ***16.06.'17***

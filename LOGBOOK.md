@@ -1,4 +1,15 @@
-# open++ LOGBOOK
+# LOGBOOK
+
+---
+***Date: 16.06.'17*** Motion
+
+Found
+[Motion with Raspicam [v4l2 - german]](https://www.bitblokes.de/2014/01/kameramodul-des-raspberry-pi-v4l-treiber-video4linux-und-motion/)
+so I can use Motion with the Raspiberry Pi now.
+
+Config in:
+> /etc/motion/motion.conf
+
 ---
 ***Date: 26.05.'17***
 ```` md6
