@@ -7,6 +7,9 @@ Found
 [Motion with Raspicam [v4l2 - german]](https://www.bitblokes.de/2014/01/kameramodul-des-raspberry-pi-v4l-treiber-video4linux-und-motion/)
 so I can use Motion with the Raspiberry Pi now.
 
+17.06.'17
+unfortunately motions snapshots can't be saved in %Y-%m-%d directory,lacking sudo rights. cron kills motion @reboot and executes motion with sudo. [dirty solution :/]
+
 Config in:
 > /etc/motion/motion.conf
 

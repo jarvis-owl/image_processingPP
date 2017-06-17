@@ -7,6 +7,7 @@
  - [histogram](https://github.com/jarvis-owl/image_processingPP/tree/master/histogram) - produces given images histogram (used in [RPi-site](https://github.com/jarvis-owl/RPi-site) supported from my [log.sh](https://github.com/jarvis-owl/myBash/blob/master/log.sh) script)
  - [gray](https://github.com/jarvis-owl/image_processingPP/tree/master/gray) - convert given image to grayscale
  - [timelapse](https://github.com/jarvis-owl/image_processingPP/tree/master/timelapse) - [shall] grab a frame, measure its brightness, if so append on video
+ - [value](https://github.com/jarvis-owl/image_processingPP/tree/master/value) - determine the brightness of given image
  - MASK.cpp - shall serve as template (could have been named template.cpp)
 
 
