@@ -14,6 +14,8 @@
 */
 
 #define TESTVERSION 0
+#define SILENT 1
+
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 //#include "types.hpp"
@@ -129,9 +131,14 @@ gettimeofday(&tend,NULL);
 #if TESTVERSION
   cout << "! mind this value are not normalized to 100% - [divide by 256]" << endl;
 #endif
-cout << "average intensity: " << sum/(hsv.rows*hsv.cols) << endl;
+#if SILENT
+  cout << sum/(hsv.rows*hsv.cols) ;
+#endif
+#if !SILENT
+  cout << "average intensity: " << sum/(hsv.rows*hsv.cols) << endl;
+#endif
 
-#if 1
+#if !SILENT
   cout << "loop duration: " << tend.tv_sec - t1.tv_sec  <<":"<< (tend.tv_usec - t1.tv_usec)/1000.0<< " seconds" << endl;
                                                                 //this might be negative due to low capacity 4 bytes integer
 #endif
