@@ -13,13 +13,14 @@
   for colored object tracking
 */
 
-
+#define TESTVERSION 0
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 //#include "types.hpp"
 #include <iostream>
 #include <stdio.h>
-#include <ctime> //for time measuring
+//#include <ctime> //for time measuring
+#include <sys/time.h> //for u_sec
 
 using namespace std;
 using namespace cv;
@@ -31,7 +32,11 @@ int main( int argc, char** argv )
 {
   Mat src, dst;
   int x,y;
-  x = y = 5;
+  x = 1;
+  y = 0;
+
+  int i,j;
+  uchar* p;
 
   /// Load image
   src = imread( argv[1], 1 );
@@ -43,40 +48,45 @@ int main( int argc, char** argv )
   vector<Mat> bgr_planes;
   split( src, bgr_planes );
 
+  #if TESTVERSION
   cout << "number of matrix channels: " << src.channels() << endl;
-  cout << "matrix size: " << src.size() << endl;
-  cout << "rows: " <<  src.rows << "\t cols: " << src.cols << "\tpx: " << src.rows*src.cols<< endl << endl;
+  cout << "    matrix size: " << src.size() << endl;
+  cout << "\tpx: " << src.rows*src.cols<< endl << endl;
 
+  for (i=0;i<9;i++){
+    p = src.ptr<uchar>(0);
+    cout << (float)p[i] << " ; ";
+    if(i==2||i==5||i==8)cout<<endl;
+  }
+  #endif
 
 //================================== HSV
 Mat hsv;
-cout << "converting to hsv" << endl;
+#if TESTVERSION
+  cout << "converting to hsv" << endl;
+#endif
 cvtColor( src, hsv, CV_RGB2HSV );
-cout << "number of hsv matrix channels: " << hsv.channels() << endl;
-cout << "hsv matrix size: " << hsv.size() << endl;
+//cout << "number of hsv matrix channels: " << hsv.channels() << endl;
+#if TESTVERSION
+  cout << "hsv matrix size: " << hsv.size() << endl;
+#endif
 
 Vec3b hsv_intensity = hsv.at<Vec3b>(y,x);
 
-cout << "Hue [0]: \t\t" << (float)hsv_intensity.val[0] << endl; //cast to display value
-cout << "Saturation [1]: \t" << (float)hsv_intensity.val[1] << endl;
-cout << "Value [2]: \t\t" << (float)hsv_intensity.val[2]/2.55 << "/35" << endl << endl;
+#if TESTVERSION
+  cout << "Hue \t[0]: \t" << (float)hsv_intensity.val[0] << endl; //cast to display value
+  cout << "Saturation [1]: " << (float)hsv_intensity.val[1] << endl;
+  cout << "Value \t[2]: \t" << (float)hsv_intensity.val[2] << endl << endl;
+#endif
 
 float sum = 0;
-time_t t1 , tend;
-t1 = time(0);
+struct timeval t1, tend;
+
 
 //cout << "value: " << (float)hsv.at<Vec3b>(y,x)[2]/2.55 <<endl;
-cout << "isContinuous: " << hsv.isContinuous() << endl;
-
-/*
-for (int i = 0 ; i < hsv.rows ;  i++){
-  for(int j = 0 ; i < hsv.cols ;  j++){
-      //sum = (float)hsv_intensity.val[2]/2.55
-      sum = hsv.at<Vec3b>(i,j)[2]/2.55;
-      if(j==hsv.cols)cout<<sum<<endl;
-  }
-}
-*/
+#if TESTVERSION
+  cout << "isContinuous: " << hsv.isContinuous() << endl;
+#endif
 
 //from: http://docs.opencv.org/2.4/doc/tutorials/core/how_to_scan_images/how_to_scan_images.html
 
@@ -91,38 +101,43 @@ if (hsv.isContinuous())
     nCols *= nRows;
     nRows = 1;
 }
+#if TESTVERSION
+  for (i=0;i<9;i++){
+    p = hsv.ptr<uchar>(0);
+    cout << (float)p[i] << " ; ";
+    if(i==2||i==5||i==8)cout<<endl;
+  }
+#endif
 
-int i,j;
-uchar* p;
-/*
+//t1 = time(0);
+gettimeofday(&t1,NULL);
+
 for( i = 0; i < nRows; ++i)
 {
-    //p = hsv.ptr<uchar>(i);
-    for ( j = 0; j < nCols; ++j)
+    p = hsv.ptr<uchar>(i);
+    for ( j = 2; j < nCols; j+=3)
     {
-        //p[j] = table[p[j]];
+
         //sum = hsv.at<Vec3b>(i,j)[2]/2.55;
-        sum = p[j]
-        if(j==0)cout<<sum<<endl;
+        sum += p[j];
+        if(j%nRows)cout<<"sum: "<<sum<<endl;
     }
 }
-*/
-for (i=0;i<10;i++){
-  p = hsv.ptr<uchar>(0);
-  cout << (float)p[i] << endl;
-}
-tend = time(0);
+//tend = time(0);
+gettimeofday(&tend,NULL);
 
-
+#if TESTVERSION
+  cout << "! mind this value are not normalized to 100% - [divide by 256]" << endl;
+#endif
 cout << "average intensity: " << sum/(hsv.rows*hsv.cols) << endl;
-cout << "loop duration: " << difftime(t1,tend) << " seconds" << endl;
 
+#if 1
+  cout << "loop duration: " << tend.tv_sec - t1.tv_sec  <<":"<< (tend.tv_usec - t1.tv_usec)/1000.0<< " seconds" << endl;
+                                                                //this might be negative due to low capacity 4 bytes integer
+#endif
 //cout << "what hsv 2d: " << (float)hsv.at<uchar>(y,x) << endl; // I don't know return value represents?
 
-
-
- cout<< "completed" <<endl;
-  //waitKey(0);
+//waitKey(0);
 
   return 0;
 }
