@@ -90,3 +90,5 @@ And a bit markdown for Documentation.
 [OpenCV 3.2.0 Cascade Classifier](http://docs.opencv.org/3.0-beta/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html)
 
 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
+[Banana Classifier - Coding Robin](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
